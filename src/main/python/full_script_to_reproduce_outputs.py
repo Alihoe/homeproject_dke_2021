@@ -1,10 +1,10 @@
-from home_project_dke_2021.src.main.python.train_classifier import train_classifier
-from home_project_dke_2021.src.main.python.classify_and_put_out import classify_and_put_out
-from home_project_dke_2021.src.main.python.collect_tweet_ids_per_pld import collect_tweet_ids_per_pld
-from home_project_dke_2021.src.main.python.generate_dataset_with_features import generate_labeled_dataset_with_features, \
+from homeproject_dke_2021.src.main.python.train_classifier import train_classifier
+from homeproject_dke_2021.src.main.python.classify_and_put_out import classify_and_put_out
+from homeproject_dke_2021.src.main.python.collect_tweet_ids_per_pld import collect_tweet_ids_per_pld
+from homeproject_dke_2021.src.main.python.generate_dataset_with_features import generate_labeled_dataset_with_features, \
     generate_test_dataset_with_features
-from home_project_dke_2021.src.main.python.generate_feature_set import generate_feature_set
-from home_project_dke_2021.src.main.python.hydrate_tweets import collect_hydrated_tweets, move_hydrated_tweets_to_pol_directory
+from homeproject_dke_2021.src.main.python.generate_feature_set import generate_feature_set
+from homeproject_dke_2021.src.main.python.hydrate_tweets import collect_hydrated_tweets, move_hydrated_tweets_to_pol_directory
 
 
 input_file_name_left = '../../../input_data/left_train.csv'
