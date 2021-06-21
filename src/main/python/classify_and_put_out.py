@@ -18,7 +18,7 @@ def classify_and_put_out(dataset_path, classifier, input_file_name_test_plds, ou
         count = 0
         for pld in plds:
             if y_pred[count] == 'L':
-                csv_writer_left.writerow([pld] + [y_proba[count][0]])
+                csv_writer_left.writerow([pld][0] + [y_proba[count][0]])
             count += 1
     left.close()
     right = open(output_right, 'w')
@@ -28,7 +28,7 @@ def classify_and_put_out(dataset_path, classifier, input_file_name_test_plds, ou
         count = 0
         for pld in plds:
             if y_pred[count] == 'R':
-                csv_writer_right.writerow([pld] + [y_proba[count][1]])
+                csv_writer_right.writerow([pld][0] + [y_proba[count][1]])
             count += 1
     right.close()
 
