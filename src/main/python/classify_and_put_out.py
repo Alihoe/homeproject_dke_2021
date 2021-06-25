@@ -1,4 +1,5 @@
 import csv
+import shutil
 
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
@@ -31,6 +32,8 @@ def classify_and_put_out(dataset_path, classifier, input_file_name_test_plds, ou
                 csv_writer_right.writerow([pld][0] + [y_proba[count][1]])
             count += 1
     right.close()
+    shutil.copyfile(output_left, '../resources/generated_left.csv')
+    shutil.copyfile(output_right, '../resources/generated_right.csv')
 
 
 
