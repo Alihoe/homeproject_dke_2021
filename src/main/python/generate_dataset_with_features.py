@@ -20,11 +20,11 @@ def count_features_of_pld(pld_text_file_path, features):
     return count_features
 
 
-def generate_labeled_dataset_with_features(output_file_name, input_file_name_left, input_file_name_right, hydrated_tweets_directory):
+def generate_labeled_dataset_with_features(output_file_name, input_file_name_left, input_file_name_right, hydrated_tweets_directory, feature_set_file):
     data_file = open(output_file_name, 'w')
     csv_writer = csv.writer(data_file)
     # prepare header
-    with open('word_feature_set.txt', "r") as feature_set:
+    with open(feature_set_file, "r") as feature_set:
         features_new_lines = feature_set.readlines()
     features = []
     for line in features_new_lines:
@@ -45,6 +45,37 @@ def generate_labeled_dataset_with_features(output_file_name, input_file_name_lef
         right_plds = csv.reader(right_train, delimiter=' ', quotechar='|')
         for pld in right_plds:
             text_path = hydrated_tweets_directory+'right/hydrated_texts_' + pld[0] + '.txt'
+            if path.exists(text_path):
+                count_features = count_features_of_pld(text_path, features)
+                csv_writer.writerow([pld] + ['R'] + count_features)
+    data_file.close()
+
+
+def generate_labeled_dataset_with_features_descriptions(output_file_name, input_file_name_left, input_file_name_right, hydrated_tweets_directory, feature_set_file):
+    data_file = open(output_file_name, 'w')
+    csv_writer = csv.writer(data_file)
+    # prepare header
+    with open(feature_set_file, "r") as feature_set:
+        features_new_lines = feature_set.readlines()
+    features = []
+    for line in features_new_lines:
+        features.append(line.replace("\n", ""))
+    header = features.copy()
+    header.insert(0, "PLD")
+    header.insert(1, "bias(L for left and R for right)")
+    csv_writer.writerow(header)
+    # print data
+    with open(input_file_name_left, newline='') as left_train:
+        left_plds = csv.reader(left_train, delimiter=' ', quotechar='|')
+        for pld in left_plds:
+            text_path = hydrated_tweets_directory+'left/hydrated_descriptions_'+pld[0]+'.txt'
+            if path.exists(text_path):
+                count_features = count_features_of_pld(text_path, features)
+                csv_writer.writerow([pld] + ['L'] + count_features)
+    with open(input_file_name_right, newline='') as right_train:
+        right_plds = csv.reader(right_train, delimiter=' ', quotechar='|')
+        for pld in right_plds:
+            text_path = hydrated_tweets_directory+'right/hydrated_descriptions_' + pld[0] + '.txt'
             if path.exists(text_path):
                 count_features = count_features_of_pld(text_path, features)
                 csv_writer.writerow([pld] + ['R'] + count_features)
