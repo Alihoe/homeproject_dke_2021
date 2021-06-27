@@ -103,3 +103,26 @@ def generate_test_dataset_with_features(output_file_name, input_file_name, hydra
                 count_features = count_features_of_pld(text_path, features)
                 csv_writer.writerow([pld] + count_features)
     data_file.close()
+
+
+def generate_test_dataset_with_features_descriptions(output_file_name, input_file_name, hydrated_tweets_directory):
+    data_file = open(output_file_name, 'w')
+    csv_writer = csv.writer(data_file)
+    # prepare header
+    with open('word_feature_set_descriptions.txt', "r") as feature_set:
+        features_new_lines = feature_set.readlines()
+    features = []
+    for line in features_new_lines:
+        features.append(line.replace("\n", ""))
+    header = features.copy()
+    header.insert(0, "PLD")
+    csv_writer.writerow(header)
+    # print data
+    with open(input_file_name, newline='') as train:
+        plds = csv.reader(train, delimiter=' ', quotechar='|')
+        for pld in plds:
+            text_path = hydrated_tweets_directory+'hydrated_descriptions_'+pld[0]+'.txt'
+            if path.exists(text_path):
+                count_features = count_features_of_pld(text_path, features)
+                csv_writer.writerow([pld] + count_features)
+    data_file.close()
