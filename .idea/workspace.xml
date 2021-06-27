@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29e3c36b-1ce7-4209-b203-6b2596484950" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_data/left.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_data/right.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/python/classify_and_put_out.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/classify_and_put_out.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/python/full_script_to_reproduce_outputs.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/full_script_to_reproduce_outputs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/python/generate_dataset_with_features.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/generate_dataset_with_features.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/python/train_classifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/train_classifier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generated_left.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generated_right.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
