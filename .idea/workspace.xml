@@ -8,9 +8,14 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output_data/left.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/output_data/right.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/python/classify_and_put_out.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/classify_and_put_out.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/python/dataset_labeled" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/dataset_labeled" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/python/dataset_labeled_descriptions" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/dataset_labeled_descriptions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/python/dataset_test_data" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/dataset_test_data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/python/dataset_test_data_descriptions" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/dataset_test_data_descriptions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/python/full_script_to_reproduce_outputs.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/full_script_to_reproduce_outputs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/python/train_classifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/train_classifier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/python/generate_feature_set.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/generate_feature_set.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/python/word_feature_set.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/word_feature_set.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/python/word_feature_set_descriptions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/word_feature_set_descriptions.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/generated_left.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/generated_right.csv" beforeDir="false" />
     </list>

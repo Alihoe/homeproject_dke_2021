@@ -44,7 +44,7 @@ def generate_feature_set():
         words = [w.lower() for w in filtered]
         all_words.extend(words)
     all_words = list_sorted_by_frequency(all_words)
-    word_features = all_words[:6000]
+    word_features = all_words[:2000]
     print(word_features)
     word_features_file = open('word_feature_set.txt', 'w')
     for element in word_features:
@@ -71,7 +71,7 @@ def generate_feature_set_descriptions():
         words = [w.lower() for w in filtered]
         all_words.extend(words)
     all_words = list_sorted_by_frequency(all_words)
-    word_features = all_words[:6000]
+    word_features = all_words[:2000]
     print(word_features)
     word_features_file = open('word_feature_set_descriptions.txt', 'w')
     for element in word_features:
