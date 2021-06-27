@@ -57,6 +57,13 @@ def collect_hydrated_tweets(input_file_name, output_directory_hydrated_tweets, i
             hydrate_tweets_texts_per_pld(pld[0], output_directory_hydrated_tweets, id_directory)
 
 
+def collect_hydrated_tweets_test_data_descriptions(input_file_name, output_directory_hydrated_tweets, id_directory):
+    with open(input_file_name, newline='') as train:
+        plds = csv.reader(train, delimiter=' ', quotechar='|')
+        for pld in plds:
+            hydrate_tweets_descriptions_per_pld(pld[0], output_directory_hydrated_tweets, id_directory)
+
+
 def move_hydrated_tweets_to_pol_directory():
     input_file_name_left = '../../../input_data/left_train.csv'
     input_file_name_right = '../../../input_data/right_train.csv'
