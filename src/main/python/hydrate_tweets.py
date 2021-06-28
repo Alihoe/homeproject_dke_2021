@@ -4,10 +4,10 @@ from os import path
 from twarc import Twarc
 
 
-consumer_key = 'BWclov818QLsDYk9B3Aj79W52'
-consumer_secret= 'xlXiW2uykVUu24Y0amXpYrOz2IjUhhrqrqcMhFsArztlYe13MM'
-access_token= '1399841441447305218-bYBcNUkxo6JetCJJKE71tbE3ndh16u'
-access_token_secret= 'GYCnkqIpoaXwFcINstSKew74z6T13JFHQPUh76bbKWPh6'
+consumer_key = ''
+consumer_secret= ''
+access_token= ''
+access_token_secret= ''
 
 
 def hydrate_tweets_texts_per_pld(pld, output_directory_hydrated_tweets, id_directory):
